@@ -28,6 +28,8 @@ function Camper({camper}) {
         return <p>Loading...</p>;
     }
 
+    const { reviews } = camper;
+
     return (
         <div className={css.camper}>
             <img
@@ -50,8 +52,8 @@ function Camper({camper}) {
                 </div>
                 <ReviewsLocationInfo
                     location={camper.location}
-                    rating={camper.location}
-                    reviewsNumber={camper?.reviews?.length || 0}
+                    rating={camper.rating}
+                    reviewsNumber={reviews?.length || 0}
                 />
                 <p className={css.description}>{camper.description}</p>
                 <BadgesBox
