@@ -49,7 +49,7 @@ function CamperDetailsPage() {
             </div>
             <ReviewsLocationInfo
                 location={camper.location}
-                rating={camper.location}
+                rating={camper.rating}
                 reviewsNumber={camper.reviews.length || 0}
             />
             <div className={css.price}>
