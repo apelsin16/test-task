@@ -24,6 +24,10 @@ function Camper({camper}) {
         }
     };
 
+    if (!camper || !camper.reviews) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <div className={css.camper}>
             <img
