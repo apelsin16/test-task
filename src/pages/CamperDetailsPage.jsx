@@ -42,6 +42,8 @@ function CamperDetailsPage() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
+    const { reviews } = camper;
+
     return (
         <div className={clsx(css.camperDetail, 'container')}>
             <div className={css.titleWrapper}>
@@ -50,7 +52,7 @@ function CamperDetailsPage() {
             <ReviewsLocationInfo
                 location={camper.location}
                 rating={camper.rating}
-                reviewsNumber={camper.reviews.length || 0}
+                reviewsNumber={reviews.length || 0}
             />
             <div className={css.price}>
                 <span>&euro; {Number(camper.price).toFixed(2)}</span>
