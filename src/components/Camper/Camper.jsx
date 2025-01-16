@@ -47,7 +47,7 @@ function Camper({camper}) {
                 <ReviewsLocationInfo
                     location={camper.location}
                     rating={camper.location}
-                    reviewsNumber={camper.reviews.length}
+                    reviewsNumber={camper?.reviews?.length || 0}
                 />
                 <p className={css.description}>{camper.description}</p>
                 <BadgesBox
