@@ -1,0 +1,32 @@
+.reviews {
+    padding-top: 56px;
+}
+
+.reviewInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2F4F7;
+    border-radius: 50%;
+    color: #E44848;
+    font-size: 24px;
+    line-height: 1.333;
+    font-weight: 600;
+}
+
+.comment {
+    color: #475467;
+}
+
+.item {
+    margin-bottom: 44px;
+}

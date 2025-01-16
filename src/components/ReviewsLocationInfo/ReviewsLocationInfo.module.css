@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    color: #101828;
+}
+
+.starImage {
+    margin-right: 4px;
+}
+
+.locationImage {
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    margin-right: 4px;
+}

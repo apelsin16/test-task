@@ -1,0 +1,32 @@
+.Header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: #F7F7F7;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 64px;
+    top: 4px;
+}
+
+.navLink {
+    font-weight: 500;
+    line-height: 1.5;
+    color: #101828;
+}
+
+.firstItem {
+    margin-right: 32px;
+}
+
+.navList {
+    display: flex;
+}
+

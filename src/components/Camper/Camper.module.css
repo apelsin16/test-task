@@ -1,0 +1,51 @@
+.camper {
+    display: flex;
+    gap: 24px;
+    border-radius: 20px;
+    border: 1px solid #DADDE1;
+    padding: 24px;
+}
+
+.image {
+    width: 292px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.333;
+    color: #101825;
+}
+
+.favorite {
+    border: none;
+    background: none;
+    margin-left: 12px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.description {
+    width: 525px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: #475467;
+}
+
+
+
+.button {
+    margin-top: 24px;
+}
+
