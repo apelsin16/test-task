@@ -1,12 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState, startTransition} from 'react';
 import {NavLink, Outlet, useParams} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {selectError, selectLoading, selectSelectedCamper} from "../redux/campers/campersSlice.js";
 import {fetchCamperById} from "../redux/camperOps.js";
-import heartIcon from "../assets/heart.svg";
 import css from "./CamperDetailsPage.module.css";
-import starIcon from "../assets/star.svg";
-import locationIcon from "../assets/location.svg";
 import ImageModal from "../components/ImageModal/ImageModal.jsx";
 import Form from "../components/Form/Form.jsx";
 import Title from "../components/Title/Title.jsx";
@@ -25,7 +22,9 @@ function CamperDetailsPage() {
     const error = useSelector(selectError);
 
     useEffect(() => {
-        dispatch(fetchCamperById(id));
+        startTransition(() => {
+            dispatch(fetchCamperById(id));
+        });
     },[dispatch, id]);
 
     const handleImageClick = (image) => {
@@ -38,11 +37,12 @@ function CamperDetailsPage() {
         setModalIsOpen(false);
     }
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
+
     if (!camper || !camper.reviews || !camper.gallery) {
         return <p>Loading...</p>;
     }
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error}</p>;
 
     const { reviews } = camper;
 
