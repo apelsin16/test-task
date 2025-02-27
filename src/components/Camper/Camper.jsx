@@ -14,13 +14,14 @@ function Camper({camper}) {
     const dispatch = useDispatch();
     const favorites = useSelector(selectFavorite);
 
-    const isFavorite = favorites.some(fav => fav.id === camper.id);
+    const isFavorite = favorites.includes(camper.id);
 
     const handleFavoriteClick = () => {
+        
         if (isFavorite) {
             dispatch(removeFromFavorites(camper.id));
         } else {
-            dispatch(addToFavorites(camper));
+            dispatch(addToFavorites(camper.id));
         }
     };
 
