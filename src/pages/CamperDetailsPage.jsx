@@ -54,7 +54,7 @@ function CamperDetailsPage() {
             <ReviewsLocationInfo
                 location={camper.location}
                 rating={camper.rating}
-                reviewsNumber={camper?.reviews.length || 0}
+                reviewsNumber={reviews.length || 0}
             />
             <div className={css.price}>
                 <span>&euro; {Number(camper.price).toFixed(2)}</span>

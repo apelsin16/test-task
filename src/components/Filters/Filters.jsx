@@ -99,7 +99,7 @@ function Filters() {
             <h4 className={css.filterTitle}>Vehicle type</h4>
             <div className={css.filtersBox}>
                 <RadioButton
-                    value='van'
+                    value='panelTruck'
                     label='Van'
                     name='camperType'
                     onChange={handleRadioChange}

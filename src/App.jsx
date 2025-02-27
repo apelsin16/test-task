@@ -1,11 +1,13 @@
 import './App.css'
 import { Routes, Route } from 'react-router';
-import HomePage from './pages/HomePage.jsx';
-import CatalogPage from './pages/CatalogPage.jsx';
-import Layout from "./components/Layout/Layout.jsx";
-import CamperDetailsPage from "./pages/CamperDetailsPage.jsx";
-import Features from "./components/Features/Features.jsx";
-import Reviews from "./components/Reviews/Reviews.jsx";
+import {lazy} from "react";
+
+const Layout = lazy(() => import("./components/Layout/Layout.jsx"));
+const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage.jsx"));
+const CamperDetailsPage = lazy(() => import("./pages/CamperDetailsPage.jsx"));
+const Features = lazy(() => import("./components/Features/Features.jsx"));
+const Reviews = lazy(() => import("./components/Reviews/Reviews.jsx"));
 
 function App() {
 
