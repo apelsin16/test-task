@@ -44,8 +44,6 @@ function CamperDetailsPage() {
         return <p>Loading...</p>;
     }
 
-    const { reviews } = camper;
-
     return (
         <div className={clsx(css.camperDetail, 'container')}>
             <div className={css.titleWrapper}>

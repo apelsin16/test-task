@@ -16,14 +16,14 @@ function App() {
           <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />} />
               <Route path="catalog" element={<CatalogPage />} />
-              <Route path="catalog/:id" element={<CamperDetailsPage />}>
-                  <Route index element={<Features />} />
-                  <Route path="features" element={<Features />} />
-                  <Route path="reviews" element={<Reviews />} />
-              </Route>
+                <Route path="catalog/:id" element={<CamperDetailsPage />}>
+                    <Route index element={<Features />} />
+                    <Route path="features" element={<Features />} />
+                    <Route path="reviews" element={<Reviews />} />
+                </Route>
           </Route>
       </Routes>
   )
 }
 
-export default App
+export default App;
